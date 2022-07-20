@@ -1,8 +1,8 @@
-// const forbidden = [
-//     "parseInt", "document.write", "eval", "isNaN", "unescape", "escape",
-//     "parseFloat", "parseInt", "eval", "isNaN", "onload", "alert", "script",
-//     "<",  ">", "onload", "=", "(", ")", '"' ,"'" ,"/"]
-const forbidden = []   
+const forbidden = [
+    "parseInt", "document.write", "eval", "isNaN", "unescape", "escape",
+    "parseFloat", "parseInt", "eval", "isNaN", "onload", "alert", "script",
+    "<",  ">", "onload", "=", "(", ")", '"' ,"'" ,"/", "#"]
+// const forbidden = []   
 
 const getForbidden = () =>{
     return forbidden
@@ -17,7 +17,6 @@ const atob = (base64) => {
 const reemplazarTodos = (palabra,reemplazar) =>{
 
     while(palabra.includes(reemplazar)){
-        //console.log(`Se ha reemplazado ${reemplazar} en ${palabra}`)
         palabra = palabra.replace(reemplazar,'')
     }
     return palabra
@@ -41,6 +40,4 @@ module.exports = {
     btoa,
     atob,
 }
-
-
 
